@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <title>Jogo da Memória</title>
+</head>
+<body onload="noCarregamento()">
+    <header>
+        <h1>Jogo da Memória</h1>
+    </header>
+    <main>
+        <section>
+            <button class='botaoIniciar' onclick="iniciar()">Iniciar/Reiniciar jogo</button>
+            <div id="tempo"></div>
+            <button onclick="mostrarMelhorTempo()">Mostrar Melhor Tempo</button>
+            <div id='tabuleiro' class="tabuleiro"></div>
+        </section>
+
+    </main>
+    <footer>
+        <p>Assessment - Bruno Luiz de Deus Adão</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
