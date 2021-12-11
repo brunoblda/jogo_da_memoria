@@ -22,7 +22,6 @@ function iniciar() {
     segundos = 0
     let cartas = criarCartas();
     let cartasEmbaralhadas = embaralharCartas(cartas)
-    console.log(cartasEmbaralhadas)
     storage = cartasEmbaralhadas.slice()
     let cartasDesviradas = todasCartasDesviradas(cartasEmbaralhadas)
     tabuleiro(cartasDesviradas);
@@ -135,7 +134,6 @@ function igualdadeDasCartas(indiceCarta) {
             virarCarta(indiceCarta)
             parDeIndicesCartas.push(indiceCarta)
             if (parDeIndicesCartas.length == 2) {
-                console.log(parDeIndicesCartas)
                 let cartas = storage.slice()
                 let carta1 = cartas[parDeIndicesCartas[0]]
                 let carta2 = cartas[parDeIndicesCartas[1]]
@@ -159,7 +157,6 @@ function igualdadeDasCartas(indiceCarta) {
             }
 
         }
-        console.log(parDeIndicesCartas)
     }
 }
 
