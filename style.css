@@ -1,26 +1,418 @@
 .tabuleiro{
-    width: 500px;
+    width: 540px;
+    height: 520px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     background-color: antiquewhite;
     margin-left: auto;
     margin-right: auto;
 }
 
-.carta {
-    width: 80px;
-    height: 80px;
-    margin: 5px;
-    border-radius: 10px;
+.carta0 {
+    display: flex; 
+    width: 100%;
+    height: 100%;
     background-color: lightgreen;
     text-align: center;
     align-content: center;
-    padding: 10px;
+    vertical-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
 
+}
+.flip-container0{
+    display: inline-block;
+    width: 115px;
+    height: 115px;
+    perspective: 1000px;
+    padding: 3px;
+    align-content: center;
+}
+
+.carta1 {
+    display: flex; 
+    width: 100%;
+    height: 100%;
+    background-color: lightgreen;
+    text-align: center;
+    align-content: center;
+    vertical-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+
+}
+.flip-container1{
+    display: inline-block;
+    width: 115px;
+    height: 115px;
+    perspective: 1000px;
+    padding: 3px;
+    align-content: center;
+}
+.carta2 {
+    display: flex; 
+    width: 100%;
+    height: 100%;
+    background-color: lightgreen;
+    text-align: center;
+    align-content: center;
+    vertical-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+
+}
+.flip-container2{
+    display: inline-block;
+    width: 115px;
+    height: 115px;
+    perspective: 1000px;
+    padding: 3px;
+    align-content: center;
+}
+
+.carta3 {
+    display: flex; 
+    width: 100%;
+    height: 100%;
+    background-color: lightgreen;
+    text-align: center;
+    align-content: center;
+    vertical-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+
+}
+.flip-container3{
+    display: inline-block;
+    width: 115px;
+    height: 115px;
+    perspective: 1000px;
+    padding: 3px;
+    align-content: center;
+}
+
+.carta4 {
+    display: flex; 
+    width: 100%;
+    height: 100%;
+    background-color: lightgreen;
+    text-align: center;
+    align-content: center;
+    vertical-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+
+}
+.flip-container4{
+    display: inline-block;
+    width: 115px;
+    height: 115px;
+    perspective: 1000px;
+    padding: 3px;
+    align-content: center;
+}
+
+.carta5 {
+    display: flex; 
+    width: 100%;
+    height: 100%;
+    background-color: lightgreen;
+    text-align: center;
+    align-content: center;
+    vertical-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+
+}
+.flip-container5{
+    display: inline-block;
+    width: 115px;
+    height: 115px;
+    perspective: 1000px;
+    padding: 3px;
+    align-content: center;
+}
+
+.carta6 {
+    display: flex; 
+    width: 100%;
+    height: 100%;
+    background-color: lightgreen;
+    text-align: center;
+    align-content: center;
+    vertical-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+
+}
+.flip-container6{
+    display: inline-block;
+    width: 115px;
+    height: 115px;
+    perspective: 1000px;
+    padding: 3px;
+    align-content: center;
+}
+
+.carta7 {
+    display: flex; 
+    width: 100%;
+    height: 100%;
+    background-color: lightgreen;
+    text-align: center;
+    align-content: center;
+    vertical-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+
+}
+.flip-container7{
+    display: inline-block;
+    width: 115px;
+    height: 115px;
+    perspective: 1000px;
+    padding: 3px;
+    align-content: center;
+}
+.carta8 {
+    display: flex; 
+    width: 100%;
+    height: 100%;
+    background-color: lightgreen;
+    text-align: center;
+    align-content: center;
+    vertical-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+
+}
+.flip-container8{
+    display: inline-block;
+    width: 115px;
+    height: 115px;
+    perspective: 1000px;
+    padding: 3px;
+    align-content: center;
+}
+
+.carta9 {
+    display: flex; 
+    width: 100%;
+    height: 100%;
+    background-color: lightgreen;
+    text-align: center;
+    align-content: center;
+    vertical-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+
+}
+.flip-container9{
+    display: inline-block;
+    width: 115px;
+    height: 115px;
+    perspective: 1000px;
+    padding: 3px;
+    align-content: center;
+}
+
+.carta10 {
+    display: flex; 
+    width: 100%;
+    height: 100%;
+    background-color: lightgreen;
+    text-align: center;
+    align-content: center;
+    vertical-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+
+}
+.flip-container10{
+    display: inline-block;
+    width: 115px;
+    height: 115px;
+    perspective: 1000px;
+    padding: 3px;
+    align-content: center;
+}
+.carta11 {
+    display: flex; 
+    width: 100%;
+    height: 100%;
+    background-color: lightgreen;
+    text-align: center;
+    align-content: center;
+    vertical-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+
+}
+.flip-container11{
+    display: inline-block;
+    width: 115px;
+    height: 115px;
+    perspective: 1000px;
+    padding: 3px;
+    align-content: center;
+}
+.carta12 {
+    display: flex; 
+    width: 100%;
+    height: 100%;
+    background-color: lightgreen;
+    text-align: center;
+    align-content: center;
+    vertical-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+
+}
+.flip-container12{
+    display: inline-block;
+    width: 115px;
+    height: 115px;
+    perspective: 1000px;
+    padding: 3px;
+    align-content: center;
+}
+.carta13 {
+    display: flex; 
+    width: 100%;
+    height: 100%;
+    background-color: lightgreen;
+    text-align: center;
+    align-content: center;
+    vertical-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+
+}
+.flip-container13{
+    display: inline-block;
+    width: 115px;
+    height: 115px;
+    perspective: 1000px;
+    padding: 3px;
+    align-content: center;
+}
+.carta14 {
+    display: flex; 
+    width: 100%;
+    height: 100%;
+    background-color: lightgreen;
+    text-align: center;
+    align-content: center;
+    vertical-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+
+}
+.flip-container14{
+    display: inline-block;
+    width: 115px;
+    height: 115px;
+    perspective: 1000px;
+    padding: 3px;
+    align-content: center;
+}
+.carta15 {
+    display: flex; 
+    width: 100%;
+    height: 100%;
+    background-color: lightgreen;
+    text-align: center;
+    align-content: center;
+    vertical-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+
+}
+.flip-container15{
+    display: inline-block;
+    width: 115px;
+    height: 115px;
+    perspective: 1000px;
+    padding: 3px;
+    align-content: center;
+}
+
+.imagem{
+
+    margin: auto;
 }
 
 .mb-3{
     margin-bottom: 16px;
+}
+
+
+input {
+    display: none;
+}
+
+#switch0:checked ~ .flip-container0 .carta0{
+    transform: rotateY(180deg);
+}
+
+#switch1:checked ~ .flip-container1 .carta1{
+    transform: rotateY(180deg);
+}
+
+#switch2:checked ~ .flip-container2 .carta2{
+    transform: rotateY(180deg);
+}
+
+#switch3:checked ~ .flip-container3 .carta3{
+    transform: rotateY(180deg);
+}
+
+#switch4:checked ~ .flip-container4 .carta4{
+    transform: rotateY(180deg);
+}
+
+#switch5:checked ~ .flip-container5 .carta5{
+    transform: rotateY(180deg);
+}
+
+#switch6:checked ~ .flip-container6 .carta6{
+    transform: rotateY(180deg);
+}
+
+#switch7:checked ~ .flip-container7 .carta7{
+    transform: rotateY(180deg);
+}
+
+#switch8:checked ~ .flip-container8 .carta8{
+    transform: rotateY(180deg);
+}
+
+#switch9:checked ~ .flip-container9 .carta9{
+    transform: rotateY(180deg);
+}
+
+#switch10:checked ~ .flip-container10 .carta10{
+    transform: rotateY(180deg);
+}
+
+#switch11:checked ~ .flip-container11 .carta11{
+    transform: rotateY(180deg);
+}
+
+#switch12:checked ~ .flip-container12 .carta12{
+    transform: rotateY(180deg);
+}
+
+#switch13:checked ~ .flip-container13 .carta13{
+    transform: rotateY(180deg);
+}
+
+#switch14:checked ~ .flip-container14 .carta14{
+    transform: rotateY(180deg);
+}
+
+#switch15:checked ~ .flip-container15 .carta15{
+    transform: rotateY(180deg);
 }

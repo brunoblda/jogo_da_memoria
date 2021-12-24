@@ -8,6 +8,7 @@ let wLocalStorage = window.localStorage;
 let numeroErros = 0
 let segundos = 0
 let interval;
+let cartasJaAcertadas = []
 
 function noCarregamento() {
     let cartas = criarCartas();
@@ -20,6 +21,9 @@ function iniciar() {
     contadorDeClicks = 0
     clearInterval(interval)
     segundos = 0
+    numeroErros = 0
+    pontos = 0
+    cartasJaAcertadas = []
     let cartas = criarCartas();
     let cartasEmbaralhadas = embaralharCartas(cartas)
     storage = cartasEmbaralhadas.slice()
@@ -59,6 +63,7 @@ function criarCartas() {
         carta.push(`img${j}.png`)
         //true é a frente da carta e false é a parte de tras da carta
         carta.push(true)
+        carta.push(i)
         j++
         if (i === 7) {
             j = 0
@@ -120,9 +125,12 @@ function tabuleiro(cartas) {
     cartas.forEach(function (carta, i) {
         frenteOuVerso = carta[2] == true ? 1 : 0;
         tabuleiroDeCartas.innerHTML += `
-        <div class="carta" id="carta${i}" onclick="igualdadeDasCartas(${i})">
+        <input type="checkbox" id="switch${i}" />
+        <label class="flip-container${i}" for="switch${i}" >
+        <div class="carta${i}" id="carta${i}" onclick="igualdadeDasCartas(${i})">
         <img class ="imagem" src="images/${carta[frenteOuVerso]}">
         </div>
+        </label>
         `
     });
 }
@@ -137,10 +145,13 @@ function igualdadeDasCartas(indiceCarta) {
                 let cartas = storage.slice()
                 let carta1 = cartas[parDeIndicesCartas[0]]
                 let carta2 = cartas[parDeIndicesCartas[1]]
-                if (carta1[1] == carta2[1]) {
+                if (carta1[1] == carta2[1] && carta1[3] != carta2[3] &&
+                    !cartasJaAcertadas.includes(carta1[3]) && !cartasJaAcertadas.includes(carta2[3])) {
                     contadorDeClicks = 0
                     parDeIndicesCartas = []
                     pontos += 1
+                    cartasJaAcertadas.push(carta1[3])
+                    cartasJaAcertadas.push(carta2[3])
                     if (pontos == 8) {
                         iniciou = false
                         terminoDoJogo()
@@ -187,6 +198,8 @@ function terminoDoJogo() {
         clearInterval(interval);
         segundos = 0
         numeroErros = 0
+        pontos = 0
+        cartasJaAcertadas = []
     }, 1000);
 }
 
@@ -210,8 +223,27 @@ function virarCarta(indiceCarta) {
     let carta = cartas[indiceCarta]
     carta[2] = carta[2] == true ? false : true
     frenteOuVerso = carta[2] == true ? 1 : 0;
-    document.getElementById(`carta${indiceCarta}`).innerHTML = `
-    <img class="imagem" src="images/${carta[frenteOuVerso]}"> 
-    </div>
-    `
+
+    //interval3 = setTimeout(function () {
+    if (frenteOuVerso == 1) {
+        interval2 = setTimeout(function () {
+            document.getElementById(`switch${indiceCarta}`).checked = true;
+        }, 1);
+        interval2 = setTimeout(function () {
+            document.getElementById(`carta${indiceCarta}`).innerHTML = `
+                <img class="imagem" src="images/${carta[frenteOuVerso]}"> 
+                `
+        }, 250);
+    } else {
+        interval2 = setTimeout(function () {
+            document.getElementById(`switch${indiceCarta}`).checked = false;
+        }, 1);
+        interval2 = setTimeout(function () {
+            document.getElementById(`carta${indiceCarta}`).innerHTML = `
+                <img class="imagem" src="images/${carta[frenteOuVerso]}"> 
+                `
+        }, 250);
+    }
+    //}, 250);
+
 }
